@@ -23,3 +23,5 @@ Si necesitas ubicar un comando, parámetro o mensaje de error específico durant
 
 ⚡ Cheat Sheet: Referencia Rápida de Git — Comandos esenciales y soluciones a problemas comunes/emergencias.
 
+
+

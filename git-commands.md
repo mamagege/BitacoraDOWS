@@ -41,9 +41,15 @@ git config --global core.editor "code --wait"
 git config --list --show-origin
 
 
+
+```
+
+
 ## 🚀 3. Inicialización y Clonación de Repositorios
 
+
 ```bash
+
 # Inicializar un nuevo repositorio en el directorio actual
 git init
 
@@ -55,6 +61,9 @@ git clone [https://github.com/usuario/repositorio.git](https://github.com/usuari
 
 # Clonar dentro de una carpeta específica
 git clone [https://github.com/usuario/repositorio.git](https://github.com/usuario/repositorio.git) mi-proyecto
+
+
+```
 
 
 ## 📝 4. Ciclo Básico de Trabajo: Status, Add y Commit
@@ -80,6 +89,11 @@ git commit -m "feat: agregar entidad Usuario" -m "- Campos: id, email y password
 
 # Atajo: Add + Commit directo para archivos YA RASTREADOS (No incluye archivos Untracked)
 git commit -am "fix: corregir NullPointerException en cálculo de saldo"
+
+
+```
+
+
 
 
 ## 🔍 5. Inspección del Historial y Comparaciones
@@ -122,11 +136,16 @@ git diff <hash_commit_A> <hash_commit_B>
 
 # Compara las diferencias entre 2 ramas
 git diff main develop
-🛡️ 6. Configuración de .gitignore
+
+```
+
+
+## 🛡️ 6. Configuración de .gitignore
 El archivo .gitignore indica a Git qué archivos o carpetas debe omitir (archivos compilados, configuraciones de IDE, datos sensibles).
 
 Reglas de Sintaxis
-Fragmento de código
+
+```
 # Ignorar archivo específico
 secretos.env
 
@@ -143,8 +162,9 @@ build/
 
 # Excepción a una regla previa (!)
 !configuracion-importante.log
+
 Plantilla Recomendada para Java (Maven / Gradle / IDEs)
-Fragmento de código
+
 # Archivos compilados de Java
 *.class
 
@@ -176,6 +196,8 @@ out/
 .DS_Store
 Thumbs.db
 
+```
+
 ## ⏪ 7. Modificación y Deshacer Cambios Básicos
 
 ```bash
@@ -203,4 +225,4 @@ git diff vs git diff --staged: git diff evalúa lo que está en tu editor local 
 
 git commit -am no rastrea archivos nuevos: Solo funciona si los archivos modificados ya estaban en el historial de Git. Si creas un archivo .java nuevo, debes hacer git add explícito.
 
-git restore --staged no borra código: Retira el archivo del próximo commit pero conserva el código modificado en tu editor. Por el contrario, git restore (sin --staged) sobreescribe tu código local destruyendo los cambios no guardados.
+git restore --staged no borra código: Retira el archivo del próximo commit pero conserva el código modificado en tu editor. Por el contrario, git restore (sin --staged) sobreescribe tu código local destruyendo los cambios no guardados. 
