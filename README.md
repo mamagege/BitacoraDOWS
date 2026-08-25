@@ -14,7 +14,7 @@ Si necesitas ubicar un comando, parámetro o mensaje de error específico durant
   grep -rnw './' -e "palabra_clave_o_error"
 
   📌 Estructura y Contenidos de la Bitácora
-🔹 Semana 1: Git, Git Merge y Git Flow
+🔹 Git, Git Merge y Git Flow
 📖 01. Comandos Base e Inicialización — git init, add, commit, status, log, .gitignore e historial.
 
 🔀 02. Gestión de Ramas: Git Merge vs. Rebase — git branch, switch, checkout, merge, rebase y resolución de conflictos.
