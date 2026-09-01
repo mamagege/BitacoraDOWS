@@ -1,6 +1,6 @@
 # 🛠️ Taller 01: Resolución y Guía Arquitectónica de Java Streams API
 
-> **Autor:** Juan Diego Gaitán  
+> **Autor:** Juan Diego Gaitan
 > **Módulo:** Semana 1 - Programación Funcional y Procesamiento de Flujos en Java  
 > **Paquete:** `ResolucionTaller` (`semana01/taller01/src/ResolucionTaller`)
 

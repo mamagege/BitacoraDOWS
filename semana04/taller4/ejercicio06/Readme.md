@@ -1,0 +1,9 @@
+Objetivo: Diseñar un motor de recomendaciones dinámico donde el cambio de preferencias de un usuario actualice automáticamente múltiples componentes del sistema en tiempo real. 
+1. Rol de cada patrón 
+Strategy (Cálculo): Resuelve el cómo recomendar. Encapsula algoritmos complejos (género, historial, popularidad) en clases independientes e intercambiables en tiempo de ejecución. El sistema central ignora la implementación matemática de la recomendación. 
+Observer (Reactividad): Resuelve a quién avisar. Desacopla el perfil del usuario (Subject) de los componentes de presentación o background (Home, Notificaciones). Elimina la necesidad de polling (consultas constantes a la base de datos para ver si algo cambió). 
+2. Cómo interactúan (Multivariable)Ambos patrones son complementarios y operan en fases distintas del evento. El usuario decide cambiar sus preferencias, lo que inyecta una nueva Strategy en su perfil de usuario (ej. pasa de PopularityStrategy a GenreStrategy). Al mutar este estado, el perfil actúa como Subject y dispara el patrón Observer, notificando a los componentes suscritos. Cada Observer reacciona al aviso, lee la nueva Strategy inyectada, calcula el nuevo contenido y se re-renderiza de forma autónoma. 
+3. Justificación Arquitectónica (Clean Code, SOLID y XP) 
+Single Responsibility Principle (SRP): El algoritmo de popularidad no sabe que existe una interfaz gráfica. La interfaz gráfica no sabe cómo calcular la popularidad. Cohesión alta. 
+Open/Closed Principle (OCP): Si el equipo de Data Science crea un nuevo algoritmo basado en Machine Learning, creamos un MLSimilarityStrategy. No se toca ni un solo if o switch en el core del usuario. 
+Dependency Inversion Principle (DIP) & TDD: Los componentes gráficos dependen de la abstracción PreferenceObserver. Podemos probar la lógica de recomendación inyectando un MockUser, logrando pruebas unitarias deterministas e instantáneas, un pilar de XP.              
