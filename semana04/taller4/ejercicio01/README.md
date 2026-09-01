@@ -1,4 +1,4 @@
-# 💳 Ejercicio #01 — Plataforma de Pagos Inteligentes
+# Ejercicio #01 — Plataforma de Pagos Inteligentes
 
 > **DOSW COMPANY** — *Ejercicios de Refuerzo: Patrones de Diseño Combinados (Multivariable)*  
 > **Asignatura:** Desarrollo y Operaciones de Software (DOSW)  

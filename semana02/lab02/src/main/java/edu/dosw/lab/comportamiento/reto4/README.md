@@ -2,7 +2,7 @@
 
 ## 1. Patrón de Diseño
 * **Categoría:** Comportamiento
-* **Patrón Utilizado:** **Strategy**
+* **Patrón Utilizado:** Strategy
 
 ---
 
